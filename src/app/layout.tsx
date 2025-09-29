@@ -21,8 +21,8 @@ const fuzzyBubbles = Fuzzy_Bubbles({
 });
 
 export const metadata: Metadata = {
-  title: "CoqFather",
-  description: "CoqFather NFT Marketplace",
+  title: "Pebubu",
+  description: "Pebubu NFT Marketplace",
 };
 
 export default function RootLayout({

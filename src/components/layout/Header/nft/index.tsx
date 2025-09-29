@@ -31,28 +31,21 @@ const NFTHeader = () => {
 
   return (
     <div className="w-full flex items-center justify-between">
-      <div className="flex items-center" style={{ gap: "1rem" }}>
-        {loading && (
+      <div className="flex items-center">
+        {/* {loading && (
           <div className="w-full aspect-square  rounded-[10px]"></div>
         )}
         <Image
           src="/home/pebubu.png"
-          // src="/home/logo.jpeg"
           width={50}
           height={0}
           alt=""
           className="rounded-full border-[#e0d6d2] border-2"
           priority={true}
           onLoad={() => setLoading(false)}
-        />
+        /> */}
         {siderWidth > 500 && (
-          // <div
-          //   style={{
-          //     position: "relative",
-          //     display: "inline-block",
-          //   }}
-          // >
-          <Link href=" https://thecoqfather.com/" target="_blank">
+          <Link href="https://pebubu.meme/" target="_blank">
             <Image
               style={{
                 height: "120px",
@@ -60,7 +53,6 @@ const NFTHeader = () => {
                 marginTop: "-16px",
               }}
               src="/home/Pebubu_Marketplace.png"
-              // src="/home/COQFOAM.png"
               width={300}
               height={0}
               className="-mt-[4.25rem]"

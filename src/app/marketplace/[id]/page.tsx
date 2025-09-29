@@ -38,7 +38,7 @@ const NFT = ({ params }: { params: Promise<{ id: string }> }) => {
 
   useEffect(() => {
     if (!id) return;
-    
+
     axios
       .get(nftUrl, {
         headers: {
@@ -96,7 +96,8 @@ const NFT = ({ params }: { params: Promise<{ id: string }> }) => {
                         width={0}
                         height={0}
                         alt=""
-                        src={"/home/logo.jpeg"}
+                        src={"/home/pebubu.png"}
+                        // src={"/home/logo.jpeg"}
                         className="w-[45px] h-auto rounded-[8px]"
                       />
                       <div className="ml-[20px] text-left">
