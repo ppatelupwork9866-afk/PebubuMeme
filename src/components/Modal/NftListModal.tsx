@@ -15,7 +15,7 @@ const NftListModal = () => {
   const { nftListModal, setNftListModal } = useSettingModal();
   const pathName = usePathname();
   const { network, selectedNFT, walletID } = useWallet();
-  const xKey = process.env.NEXT_PUBLIC_API_KEY.toString();
+  const xKey = String(process.env.NEXT_PUBLIC_API_KEY || "");
   const endPoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
   const marketplaceAddress = process.env.NEXT_PUBLIC_MARKETPLACE_ADDRESS;
 

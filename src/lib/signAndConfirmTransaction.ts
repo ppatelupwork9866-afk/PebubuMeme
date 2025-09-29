@@ -4,15 +4,20 @@ import getVersionedTransaction from "./getVersionedTransaction";
 
 const signAndConfirmTransaction = async (network, transaction) => {
   const provider = getProvider(); // see "Detecting the Provider"
-  const xKey = process.env.NEXT_PUBLIC_API_KEY.toString();
-  const rpcUrl = network === "mainnet-beta" ? `https://rpc.shyft.to?api_key=${xKey}` : clusterApiUrl(network as any);
+  const xKey = String(process.env.NEXT_PUBLIC_API_KEY || "");
+  const rpcUrl =
+    network === "mainnet-beta"
+      ? `https://rpc.shyft.to?api_key=${xKey}`
+      : clusterApiUrl(network as any);
   // const rpcUrl = clusterApiUrl(network as any)
   const connection = new Connection(rpcUrl, "confirmed");
 
-  const versionedTransaction = getVersionedTransaction(transaction)
+  const versionedTransaction = getVersionedTransaction(transaction);
 
-  const { signature } = await provider.signAndSendTransaction(versionedTransaction);
+  const { signature } = await provider.signAndSendTransaction(
+    versionedTransaction
+  );
   return await connection.getSignatureStatus(signature);
-}
+};
 
-export default signAndConfirmTransaction
+export default signAndConfirmTransaction;

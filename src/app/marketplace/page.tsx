@@ -67,7 +67,7 @@ const Page = () => {
   const [nfts, setNfts] = useState([]);
 
   useEffect(() => {
-    const xKey = process.env.NEXT_PUBLIC_API_KEY.toString();
+    const xKey = String(process.env.NEXT_PUBLIC_API_KEY || "");
     const endPointV2 = process.env.NEXT_PUBLIC_API_V2_ENDPOINT;
     const marketplaceAddress = process.env.NEXT_PUBLIC_MARKETPLACE_ADDRESS;
 

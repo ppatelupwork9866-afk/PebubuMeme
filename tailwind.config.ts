@@ -20,6 +20,7 @@ const config: Config = {
         "50": "0.5",
       },
       fontFamily: {
+        luckiest: ["var(--font-luckiest)", "cursive"],
         fuzzy: ["Fuzzy Bubbles", "sans-serif"],
         corleone: ["Corleone", "sans-serif"],
         sans: ["var(--font-open-sans)", "sans-serif"],

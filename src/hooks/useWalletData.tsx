@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const useWalletData = () => {
-  const networkValue = process.env.NEXT_PUBLIC_NETWORK?.toString() || "devnet";
+  const networkValue = String(process.env.NEXT_PUBLIC_NETWORK || "devnet");
   const [network, setNetwork] = useState(networkValue);
   const [walletID, setWalletID] = useState("");
   const [connStatus, setConnStatus] = useState(false);
@@ -16,7 +16,7 @@ const useWalletData = () => {
   }, []);
 
   useEffect(() => {
-    const xKey = process.env.NEXT_PUBLIC_API_KEY.toString();
+    const xKey = String(process.env.NEXT_PUBLIC_API_KEY || "");
     const endPoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
     const marketplaceAddress = process.env.NEXT_PUBLIC_MARKETPLACE_ADDRESS;
     const nftUrl = `${endPoint}marketplace/active_listings?network=${network}&marketplace_address=${marketplaceAddress}`;
@@ -41,7 +41,7 @@ const useWalletData = () => {
         setActiveNFTs([]);
         toast.warning(err.response.data.message);
       });
-  }, [walletID])
+  }, [walletID]);
 
   const solanaConnect = async () => {
     const { solana } = window as any;

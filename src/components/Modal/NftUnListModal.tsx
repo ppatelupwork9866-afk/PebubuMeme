@@ -15,7 +15,7 @@ const NftUnListModal = () => {
   const { nftUnListModal, setNftUnListModal } = useSettingModal();
   const pathName = usePathname();
   const { activeNFTs, network, selectedNFT } = useWallet();
-  const xKey = process.env.NEXT_PUBLIC_API_KEY.toString();
+  const xKey = String(process.env.NEXT_PUBLIC_API_KEY || "");
   const endPoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
   const marketplaceAddress = process.env.NEXT_PUBLIC_MARKETPLACE_ADDRESS;
 
@@ -23,9 +23,9 @@ const NftUnListModal = () => {
     setIsLoading(true);
     const nftUrl = `${endPoint}marketplace/unlist`;
     let nft = null;
-    activeNFTs.map(one => {
+    activeNFTs.map((one) => {
       if (one.nft_address === selectedNFT.mint) {
-        nft = one
+        nft = one;
         return;
       }
     });
@@ -79,8 +79,9 @@ const NftUnListModal = () => {
   return (
     <>
       <div
-        className={`${nftUnListModal && pathName.includes("/nfts/") ? "w-[400px]" : "w-0"
-          } flex flex-none h-full text-white bg-[#171717] transition-all duration-500 overflow-auto modalWidth:static absolute right-0 z-20 prevent-select`}
+        className={`${
+          nftUnListModal && pathName.includes("/nfts/") ? "w-[400px]" : "w-0"
+        } flex flex-none h-full text-white bg-[#171717] transition-all duration-500 overflow-auto modalWidth:static absolute right-0 z-20 prevent-select`}
       >
         <div className="w-[400px] h-full relative overflow-auto px-[30px] pb-[50px] flex-none flex">
           <div className="w-[340px] h-full overflow-auto flex-none">
