@@ -55,10 +55,12 @@ const NFTHeader = () => {
           <Link href=" https://thecoqfather.com/" target="_blank">
             <Image
               style={{
-                height: "200px",
-                width: "230px",
+                height: "120px",
+                width: "120px",
+                marginTop: "-16px",
               }}
-              src="/home/COQFOAM.png"
+              src="/home/Pebubu_Marketplace.png"
+              // src="/home/COQFOAM.png"
               width={300}
               height={0}
               className="-mt-[4.25rem]"
