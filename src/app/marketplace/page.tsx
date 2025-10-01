@@ -14,48 +14,48 @@ const NewNFTS = dynamic(() => import("@/components/marketplace/NewNFTs"));
 const staticNFTs = [
   {
     nft: {
-      name: "Pebubu",
-      cached_image_uri: "/StaticNFTs/pebubu.png",
+      name: "To The Moon",
+      cached_image_uri: "/StaticNFTs/To_The_Moon.png",
     },
     price: "0.8",
     nft_address: "static2",
   },
   {
     nft: {
-      name: "King Pebubu",
-      cached_image_uri: "/StaticNFTs/KingPebubu.png",
+      name: "Meme Overlord Pebubu - Cased",
+      cached_image_uri: "/StaticNFTs/MemeOverlordPebubuCased.png",
     },
     price: "0.5",
     nft_address: "static1",
   },
   {
     nft: {
-      name: "Moon Pebubu",
-      cached_image_uri: "/StaticNFTs/MoonPebubu.png",
+      name: "Glitched Matrix Pebubu - Cased",
+      cached_image_uri: "/StaticNFTs/GlitchedMatrixPebubuCased.png",
     },
     price: "0.5",
     nft_address: "static3",
   },
   {
     nft: {
-      name: "Cooking Crypto Pebubu",
-      cached_image_uri: "/StaticNFTs/MissRugpullina.png",
+      name: "Liquidity Monster Pebubu - Cased",
+      cached_image_uri: "/StaticNFTs/LiquidityMonsterPebubuCased.png",
     },
     price: "0.8",
     nft_address: "static4",
   },
   {
     nft: {
-      name: "Rekt Pebubu",
-      cached_image_uri: "/StaticNFTs/RektPebubu.png",
+      name: "Legendary Chaos Pebubu - Cased",
+      cached_image_uri: "/StaticNFTs/LegendaryChaosPebubuCased.png",
     },
     price: "0.5",
     nft_address: "static5",
   },
   {
     nft: {
-      name: "Rocket Pebubu",
-      cached_image_uri: "/StaticNFTs/RocketPebubu.png",
+      name: "HODL Monk Pebubu - Cased",
+      cached_image_uri: "/StaticNFTs/HODLMonkPebubuCased.png",
     },
     price: "0.8",
     nft_address: "static6",
