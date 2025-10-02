@@ -101,7 +101,10 @@ const Page = () => {
       <div className="w-full h-full  mobile:px-[50px] px-[20px] pt-[30px] pb-[50px] overflow-auto prevent-select">
         <div className="w-full h-full relative overflow-auto flex flex-col gap-[20px]">
           <p className="text-[25px]">Explore NFTs</p>
-          <div className="w-full overflow-auto grid grid-cols-4 gap-[30px]">
+          <div
+            className="w-full overflow-auto grid grid-cols-4 gap-[30px]"
+            style={{ marginBottom: "5rem" }}
+          >
             {staticNFTs.map((item, index) => (
               <div key={index}>
                 <NewNFTS item={item} />
